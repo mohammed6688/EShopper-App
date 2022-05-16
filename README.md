@@ -1,2 +1,2 @@
 # EShopper-App
-ECommerce App using two tiers architecture
+ECommerce Android App using two tiers architecture
