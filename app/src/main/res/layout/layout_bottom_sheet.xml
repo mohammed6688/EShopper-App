@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomSheetContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:alpha="1"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/scanDocs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="@string/subtotal"/>
+
+        <TextView
+            android:id="@+id/subTotalPrice"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:gravity="end"
+            android:layout_margin="15dp"
+            android:textColor="@color/black"
+            android:text="250 EUR"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/chooseDocs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="Shipping Fee"/>
+
+        <TextView
+            android:id="@+id/shippingFee"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:gravity="end"
+            android:layout_margin="15dp"
+            android:textColor="@color/black"
+            android:text="122 EUR"/>
+
+    </LinearLayout>
+</LinearLayout>

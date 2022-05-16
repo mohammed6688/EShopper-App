@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="rtl"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Account"
+            android:textSize="20sp"
+            android:fontFamily="@font/cairo"
+            android:textColor="@color/black"
+            android:padding="15dp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/userLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_horizontal">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userImage"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/user_logo"/>
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/userImage"
+                    android:textSize="16sp"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/userEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/userName"
+                    android:textColor="@color/black"
+                    android:layout_margin="10dp"/>
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_view_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <!-- Adding 7 rows of placeholders -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <include layout="@layout/account_item" />
+                    </LinearLayout>
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+                <LinearLayout
+                    android:id="@+id/welcomeLay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/cairo_bold"
+                        android:textSize="20sp"
+                        android:text="@string/welcome"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/cairo"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:layout_margin="20dp"
+                        android:text="@string/subWelcome"/>
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:padding="12dp"
+                        android:text="@string/loginOrSignup"
+                        android:fontFamily="@font/cairo"
+                        app:cornerRadius="8dp"
+                        android:textAllCaps="false"
+                        android:backgroundTint="@color/main_blue"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/myOrders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/cairo"
+                        android:text="@string/myorders"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:contentDescription="open" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginStart="15dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/myNotifications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/cairo"
+                        android:text="@string/myNotification"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:contentDescription="open" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginStart="15dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/RegisteredAddresses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/cairo"
+                        android:text="@string/registered_addresses"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:contentDescription="open" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginStart="15dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ShareApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                 android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/cairo"
+                        android:text="@string/share_app"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:contentDescription="open" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginStart="15dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/RateUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                 android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/cairo"
+                        android:text="@string/rate_us"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:contentDescription="open" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginStart="15dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Agreements"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                 android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/cairo"
+                        android:text="@string/agreements"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:contentDescription="open" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginStart="15dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/AboutUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                 android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/cairo"
+                        android:text="@string/about_us"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:contentDescription="open" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginStart="15dp" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/logOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="40dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/cairo"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="@string/log_out"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

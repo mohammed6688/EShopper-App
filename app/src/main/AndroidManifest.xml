@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.iti.EShopper">
+
+    <application
+        android:name="com.iti.EShopper.helper.MyApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ViraStayle">
+        <activity android:name="com.iti.EShopper.Activity.Auth.EmailOrGoogle" />
+        <activity android:name="com.iti.EShopper.Activity.ImageSlider" />
+        <activity android:name="com.iti.EShopper.Activity.MyNotification" />
+        <activity android:name="com.iti.EShopper.Activity.subCategoryActivity" />
+        <activity android:name="com.iti.EShopper.Activity.IntroActivity" />
+        <activity android:name="com.iti.EShopper.Activity.Auth.WelcomeActivity" />
+        <activity android:name="com.iti.EShopper.Activity.CustomUrlActivity" />
+        <activity android:name="com.iti.EShopper.Activity.AgreementsActivity" />
+        <activity android:name="com.iti.EShopper.Activity.MyOrders" />
+        <activity android:name="com.iti.EShopper.Activity.ChooseAddress" />
+        <activity android:name="com.iti.EShopper.Activity.CheckoutActivity" />
+        <activity android:name="com.iti.EShopper.Activity.ViewAddress" />
+        <activity android:name="com.iti.EShopper.Activity.MainActivity" />
+        <activity android:name="com.iti.EShopper.Activity.AddAddress" />
+        <activity android:name="com.iti.EShopper.Activity.BasketActivity" />
+        <activity android:name="com.iti.EShopper.Activity.AboutUsActivity" />
+        <activity android:name="com.iti.EShopper.Activity.EditActivity" />
+        <activity android:name="com.iti.EShopper.Activity.ItemReview" />
+        <activity android:name="com.iti.EShopper.Activity.ItemsActivity" />
+        <activity android:name="com.iti.EShopper.Activity.Auth.ResetActivity" />
+        <activity android:name="com.iti.EShopper.Activity.UseTerms" />
+        <activity android:name="com.iti.EShopper.Activity.Auth.RegisterActivity" />
+        <activity android:name="com.iti.EShopper.Activity.Auth.LoginActivity" />
+        <activity android:name="com.iti.EShopper.Activity.Search" />
+        <activity android:name="com.iti.EShopper.Activity.SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"
+        tools:ignore="ManifestOrder" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+</manifest>

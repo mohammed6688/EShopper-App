@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layoutDirection="rtl"
+    android:background="@drawable/login_bg"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="35sp"
+            android:layout_margin="35dp"
+            android:textColor="@color/black"
+            android:text="@string/register"
+            android:fontFamily="@font/cairo"
+            android:textStyle="bold"/>
+
+
+        <ImageView
+            android:id="@+id/photoUpload"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/user_logo"/>
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext"
+            android:padding="10dp"
+            android:inputType="text"
+            android:layout_margin="20dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/cairo"
+            android:hint="@string/Name"/>
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext"
+            android:padding="10dp"
+            android:layout_margin="20dp"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:fontFamily="@font/cairo"
+            android:hint="@string/email"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="3">
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                app:ccp_textSize="16sp"
+                app:ccp_defaultNameCode="kw"
+                app:ccp_autoDetectCountry="true"
+                app:ccp_rememberLastSelection="true"
+                app:ccp_countryAutoDetectionPref="SIM_NETWORK_LOCALE"
+                app:ccp_showNameCode="true"/>
+            <EditText
+                android:id="@+id/phone"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edittext"
+                android:maxLength="11"
+                android:padding="10dp"
+                android:inputType="phone"
+                android:textColorHint="@color/black"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/cairo"
+                android:textColor="@color/black"
+                android:hint="@string/PhoneNumber"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext"
+            android:padding="10dp"
+            android:layout_margin="20dp"
+            android:inputType="textPassword"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:fontFamily="@font/cairo"
+            android:hint="@string/Password"/>
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/repeatedPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext"
+            android:padding="10dp"
+            android:layout_margin="20dp"
+            android:inputType="textPassword"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:fontFamily="@font/cairo"
+            android:hint="@string/ConfirmPassword"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/blackLightColor"
+            android:textSize="15sp"
+            android:background="@color/white"
+            android:fontFamily="@font/cairo"
+            android:text="@string/termsAcceptanceText"/>
+        <TextView
+            android:id="@+id/terms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:background="@color/white"
+            android:fontFamily="@font/cairo"
+            android:text="@string/TermsAndConditions"/>
+
+
+        <com.github.jorgecastilloprz.FABProgressCircle
+            android:id="@+id/fabProgressCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:arcColor="#00ffff"
+            app:arcWidth="5dp"
+            android:layout_gravity="center_horizontal"
+            app:finalIcon="@drawable/ic_baseline_check_24">
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@string/register"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                app:tint="@color/white" />
+
+        </com.github.jorgecastilloprz.FABProgressCircle>
+
+    </LinearLayout>
+</ScrollView>

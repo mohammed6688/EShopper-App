@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_blue"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/phone"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_baseline_local_phone_white_24"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Categories"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:fontFamily="@font/cairo"
+            android:textColor="@color/white"
+            android:padding="10dp"/>
+        <FrameLayout
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center">
+            <ImageView
+                android:id="@+id/basket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_shopping_basket_white_24"/>
+
+            <FrameLayout
+                android:id="@+id/view_alert_red_circle"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_gravity="top|end"
+                android:background="@drawable/circle_red"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <TextView
+                    android:id="@+id/view_alert_count_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#ffff"
+                    android:textSize="10sp"
+                    tools:text="3"/>
+
+            </FrameLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/progTxt"
+        android:visibility="gone"
+        android:layout_margin="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:text="@string/there_is_no_category"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/postrecyclerview"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <!-- Adding 7 rows of placeholders -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/home_item" />
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</RelativeLayout>

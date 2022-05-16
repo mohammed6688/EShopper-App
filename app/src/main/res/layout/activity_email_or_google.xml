@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/login_bg"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="35sp"
+        android:layout_margin="35dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/cairo_light"
+        android:text="@string/register"
+        android:textStyle="bold"/>
+
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/vector_image" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <com.shobhitpuri.custombuttons.GoogleSignInButton
+            android:id="@+id/sign_in_button"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/sign_in_with_google"
+            android:fontFamily="@font/cairo"
+            android:textColor="@color/black"
+            android:layout_gravity="center"/>
+        <com.facebook.login.widget.LoginButton
+            android:visibility="gone"
+            android:id="@+id/button_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center"/>
+        <com.google.android.material.button.MaterialButton
+            android:visibility="gone"
+            android:id="@+id/sign_in_button_google"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:text="@string/sign_in_with_google"
+            app:iconTint="@color/white"
+            android:fontFamily="@font/cairo"
+            android:drawableStart="@drawable/google"
+            app:icon="@drawable/google"
+            app:backgroundTint="@color/white"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sign_in_button_facebook"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:text="@string/sign_in_with_facebook"
+            app:iconTint="@color/white"
+            android:fontFamily="@font/cairo"
+            app:icon="@drawable/ic_baseline_facebook_24"
+            app:backgroundTint="#286CF6"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sign_in_button_email"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:text="@string/sign_in_with_email"
+            app:iconTint="@color/white"
+            android:fontFamily="@font/cairo"
+            app:icon="@drawable/ic_baseline_email_24"
+            app:backgroundTint="#C21919"/>
+    </LinearLayout>
+
+</LinearLayout>

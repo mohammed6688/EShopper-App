@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="rtl"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_margin="15dp"
+            android:fontFamily="@font/cairo"
+            android:text="حجز قسط"/>
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:met_textColorHint="@color/black"
+            android:layout_margin="15dp"
+            android:fontFamily="@font/cairo"
+            android:textColor="@color/black"
+            android:hint="رقم الموبايل"/>
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/phoneModel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:met_textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:layout_margin="15dp"
+            android:fontFamily="@font/cairo"
+            android:hint="نوع الجهاز"/>
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/initial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:met_textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:layout_margin="15dp"
+            android:fontFamily="@font/cairo"
+            android:hint="المقدم"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_margin="12dp"
+                android:fontFamily="@font/cairo"
+                android:text="أرفق صورة البطاقة الامامية"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/attachImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:fontFamily="@font/cairo"
+                android:textColor="@color/white"
+                android:text="اختر صورة"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_margin="15dp"
+                android:fontFamily="@font/cairo"
+                android:text="أرفق صورة البطاقة الخلفية"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/attachSecImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/cairo"
+                android:text="اختر صورة"/>
+        </LinearLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/cairo"
+            android:padding="15dp"
+            app:cornerRadius="10dp"
+            android:text="إرسال"/>
+    </LinearLayout>
+
+</ScrollView>

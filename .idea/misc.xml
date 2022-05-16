@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/courses/Developed Apps/ZainStore/app/src/main/res/layout/activity_image_slider.xml" value="0.26944444444444443" />
+        <entry key="..\:/courses/Developed Apps/ZainStore/app/src/main/res/layout/activity_items.xml" value="0.278125" />
+        <entry key="..\:/courses/Developed Apps/ZainStore/app/src/main/res/layout/activity_splash.xml" value="0.4092827004219409" />
+        <entry key="..\:/courses/Developed Apps/ZainStore/app/src/main/res/layout/offer_item.xml" value="0.27384615384615385" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/drawable/circle_red.xml" value="0.1645" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/drawable/frame.xml" value="0.1645" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/drawable/ic_baseline_arrow_drop_down_24.xml" value="0.1645" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/drawable/ic_baseline_arrow_forward_ios_24.xml" value="0.1645" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/drawable/ic_baseline_cancel_24.xml" value="0.1645" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/drawable/ic_baseline_check_24.xml" value="0.1645" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.1645" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.1645" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1645" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1645" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/drawable/ic_baseline_shopping_basket_white_24.xml" value="0.1645" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/drawable/lay_rounded_corner.xml" value="0.1645" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/drawable/rounded.xml" value="0.1645" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/drawable/rounded_button.xml" value="0.1645" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/drawable/rounded_button_selector.xml" value="0.1645" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/drawable/rounded_edittext.xml" value="0.1645" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/drawable/rounded_outline.xml" value="0.1645" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/drawable/rounded_strok.xml" value="0.1645" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/drawable/tab_select.xml" value="0.1645" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/font/cairo.xml" value="0.21666666666666667" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/layout/activity_basket.xml" value="0.278125" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/layout/activity_categorise.xml" value="0.262037037037037" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/layout/activity_checkout.xml" value="0.278125" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/layout/activity_email_or_google.xml" value="0.278125" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/layout/activity_item_review.xml" value="0.262037037037037" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/layout/activity_items.xml" value="0.262037037037037" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/layout/activity_login.xml" value="0.278125" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/layout/activity_main.xml" value="0.262037037037037" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/layout/activity_splash.xml" value="0.278125" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/layout/activity_welcome.xml" value="0.278125" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/layout/basket_item.xml" value="0.262037037037037" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/layout/category_item.xml" value="0.278125" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/layout/home_item.xml" value="0.278125" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/layout/horizontal_sliding_banner.xml" value="0.278125" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/layout/items_item.xml" value="0.262037037037037" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/layout/rectangular_banner.xml" value="0.12864583333333332" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/layout/slidingimages_layout.xml" value="0.278125" />
+        <entry key="..\:/iti/lec/Android/Project/ECommerce App/app/src/main/res/menu/menu_tab_navigation.xml" value="0.278125" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

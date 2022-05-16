@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grayLightColor"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/rectangularBanner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+        android:id="@+id/slidinglay"
+        android:layout_below="@+id/rectangularBanner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="352dp"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/indicatorlay"
+        android:layout_below="@+id/slidinglay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+        <com.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            app:centered="true"
+            app:fillColor="@color/colorAccent"
+            app:pageColor="@color/grayDarkColor"
+            app:snap="false" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/postrecyclerview"
+        android:layout_below="@+id/indicatorlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
