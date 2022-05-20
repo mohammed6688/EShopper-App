@@ -4,18 +4,16 @@
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_500">#00B6B5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#545454</color>
-
-    <color name="main_blue">#016cbb</color>
-    <color name="sub_blue">#00467A</color>
+    <color name="teal_500">#00B6B5</color>
 
     <color name="colorPrimary">#F7AB1B</color>
     <color name="colorPrimaryDark">#ED7125</color>
     <color name="colorAccent">#E54B27</color>
+
 
     <color name="selectedButton">#63FFFFFF</color>
     <color name="grayDarkColor">#707070</color>

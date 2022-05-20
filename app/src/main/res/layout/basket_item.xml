@@ -45,7 +45,7 @@
                 android:id="@+id/txtDiscount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/main_blue"
+                android:background="@color/colorPrimaryDark"
                 android:textColor="@color/white"
                 android:textSize="12sp"
                 android:padding="7dp"
@@ -75,14 +75,6 @@
                     android:singleLine="true"
                     android:fontFamily="@font/cairo_bold"
                     android:textColor="@color/black"/>
-
-                <ImageView
-                    android:id="@+id/favorite"
-                    android:visibility="gone"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_baseline_favorite_border_24"/>
             </LinearLayout>
 
             <TextView
@@ -143,7 +135,7 @@
                     android:textColor="@color/white"
                     android:fontFamily="@font/cairo"
                     android:layout_alignParentBottom="true"
-                    android:backgroundTint="@color/main_blue"
+                    android:backgroundTint="@color/colorPrimaryDark"
                     android:text="@string/book_now" />
             </RelativeLayout>
 

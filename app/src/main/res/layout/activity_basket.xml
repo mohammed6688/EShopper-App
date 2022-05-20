@@ -64,7 +64,7 @@
             app:cardPreventCornerOverlap="false"
             app:cardUseCompatPadding="true"
             app:cardCornerRadius="21dp"
-            app:cardBackgroundColor="@color/main_blue"
+            app:cardBackgroundColor="@color/colorPrimaryDark"
             android:fontFamily="@font/cairo"
             android:background="?android:selectableItemBackground"
             android:focusable="true">
@@ -122,13 +122,13 @@
                 android:fontFamily="@font/cairo"
                 android:layout_marginBottom="8dp"
                 android:textStyle="bold"
-                android:textColor="@color/main_blue" />
+                android:textColor="@color/colorPrimaryDark" />
         </LinearLayout>
         <androidx.cardview.widget.CardView
             android:id="@+id/securePayment"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="@color/main_blue"
+            app:cardBackgroundColor="@color/colorPrimaryDark"
             android:layout_weight="1"
             android:layout_margin="15dp"
             app:cardCornerRadius="10dp"

@@ -24,13 +24,6 @@
             android:textStyle="bold"/>
 
 
-        <ImageView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_gravity="center_horizontal"
-            android:visibility="gone"
-            android:src="@drawable/vector_image" />
-
         <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
@@ -61,6 +54,7 @@
             android:autofillHints="@string/password" />
 
         <androidx.cardview.widget.CardView
+            android:visibility="gone"
             android:id="@+id/card"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
@@ -118,50 +112,6 @@
                     app:tint="@color/white" />
 
             </com.github.jorgecastilloprz.FABProgressCircle>
-            <com.github.jorgecastilloprz.FABProgressCircle
-                android:id="@+id/googleProgressCircle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:arcColor="#00ffff"
-                app:arcWidth="5dp"
-                android:layout_gravity="center_horizontal"
-                app:finalIcon="@drawable/ic_baseline_check_24">
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/googleLogin"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="30dp"
-                    android:background="@color/white"
-                    android:layout_gravity="center_horizontal"
-                    android:contentDescription="@string/guest"
-                    android:src="@drawable/google"
-                    app:tint="@color/white" />
-            </com.github.jorgecastilloprz.FABProgressCircle>
-            <com.github.jorgecastilloprz.FABProgressCircle
-                android:id="@+id/facebookProgressCircle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:arcColor="#00ffff"
-                app:arcWidth="5dp"
-                android:layout_gravity="center_horizontal"
-                app:finalIcon="@drawable/ic_baseline_check_24">
-
-
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/facebook"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="30dp"
-                    android:layout_gravity="center_horizontal"
-                    android:contentDescription="@string/guest"
-                    android:src="@drawable/ic_baseline_facebook_24"
-                    app:tint="@color/white" />
-            </com.github.jorgecastilloprz.FABProgressCircle>
-            <com.facebook.login.widget.LoginButton
-                android:visibility="gone"
-                android:id="@+id/button_sign_in"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
         </LinearLayout>
 
 

@@ -53,18 +53,6 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginBottom="55dp"
                         android:text="25%"/>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginBottom="15dp"
-                        android:layout_centerHorizontal="true">
-                        <com.viewpagerindicator.CirclePageIndicator
-                            android:id="@+id/indicator"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="10dip" />
-                    </LinearLayout>
                 </RelativeLayout>
 
 
@@ -87,15 +75,6 @@
                         android:textSize="25sp"
                         android:textStyle="bold" />
 
-                    <ImageView
-                        android:id="@+id/favorite"
-                        android:visibility="gone"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="8dp"
-                        android:layout_margin="15dp"
-                        android:src="@drawable/ic_baseline_favorite_border_24"/>
-
                 </LinearLayout>
 
                 <TextView
@@ -110,118 +89,6 @@
                     android:textColor="@color/red"
                     android:fontFamily="@font/cairo"/>
 
-                <LinearLayout
-                    android:id="@+id/txtDetailsLay"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <TextView
-                        android:id="@+id/txtDetails"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginEnd="15dp"
-                        android:layout_marginBottom="15dp"
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/cairo"
-                        android:text="@string/description"/>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@color/light_gray"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginEnd="15dp"
-                        android:layout_marginBottom="15dp"/>
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:id="@+id/DetailsLay"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <TextView
-                        android:id="@+id/dtCpu"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginEnd="15dp"
-                        android:layout_marginBottom="15dp"
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/cairo"
-                        android:text="Cpu"/>
-
-                    <TextView
-                        android:id="@+id/dtRam"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginEnd="15dp"
-                        android:layout_marginBottom="15dp"
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/cairo"
-                        android:text="Ram"/>
-
-
-                    <TextView
-                        android:id="@+id/dtRom"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="14sp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginEnd="15dp"
-                        android:layout_marginBottom="15dp"
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/cairo"
-                        android:text="Rom"/>
-
-                    <TextView
-                        android:id="@+id/dtRearCamera"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="14sp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginEnd="15dp"
-                        android:layout_marginBottom="15dp"
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/cairo"
-                        android:text="Rear Camera"/>
-
-                    <TextView
-                        android:id="@+id/dtFrontCamera"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="14sp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginEnd="15dp"
-                        android:layout_marginBottom="15dp"
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/cairo"
-                        android:text="FrontCamera"/>
-
-                    <TextView
-                        android:id="@+id/dtBattery"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="14sp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginEnd="15dp"
-                        android:layout_marginBottom="15dp"
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/cairo"
-                        android:text="Battery"/>
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@color/light_gray"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginEnd="15dp"
-                        android:layout_marginBottom="15dp"/>
-                </LinearLayout>
 
                 <TextView
                     android:id="@+id/txtMore"
@@ -245,7 +112,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/main_blue"
+        android:background="@color/colorPrimaryDark"
         android:gravity="end"
         android:orientation="horizontal">
 
@@ -303,7 +170,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:background="@color/main_blue"
+                android:background="@color/colorAccent"
                 android:textSize="12sp"
                 android:paddingTop="3dp"
                 android:paddingBottom="3dp"

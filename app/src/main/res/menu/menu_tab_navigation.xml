@@ -5,21 +5,21 @@
         android:id="@+id/categorise"
         android:title="@string/Categories"
         android:icon="@drawable/home"/>
-    <item
-        android:id="@+id/offers"
-        android:title="@string/offers"
-        android:visible="false"
-        android:icon="@drawable/sale"/>
+<!--    <item-->
+<!--        android:id="@+id/offers"-->
+<!--        android:title="@string/offers"-->
+<!--        android:visible="false"-->
+<!--        android:icon="@drawable/sale"/>-->
 
     <item
         android:id="@+id/basket"
         android:title="@string/Basket"
         android:icon="@drawable/cart"/>
-    <item
-        android:id="@+id/favourite"
-        android:title="@string/Favourite"
-        android:visible="false"
-        android:icon="@drawable/notificat"/>
+<!--    <item-->
+<!--        android:id="@+id/favourite"-->
+<!--        android:title="@string/Favourite"-->
+<!--        android:visible="false"-->
+<!--        android:icon="@drawable/notificat"/>-->
     <item
         android:id="@+id/account"
         android:title="@string/MyAccount"

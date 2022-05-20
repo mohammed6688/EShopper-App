@@ -9,16 +9,9 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/main_blue"
+        android:background="@color/colorPrimaryDark"
         android:orientation="horizontal">
-        <ImageView
-            android:id="@+id/phone"
-            android:visibility="gone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:src="@drawable/ic_baseline_local_phone_white_24"/>
+
         <TextView
             android:layout_weight="1"
             android:layout_width="0dp"

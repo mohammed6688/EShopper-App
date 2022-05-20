@@ -11,8 +11,7 @@ import com.iti.EShopper.R;
 import com.iti.EShopper.helper.MyApplication;
 
 public class WelcomeActivity extends AppCompatActivity {
-
-    Button login,register;
+    Button login, register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,28 +21,23 @@ public class WelcomeActivity extends AppCompatActivity {
         login = findViewById(R.id.login);
         register = findViewById(R.id.register);
 
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent go = new Intent(WelcomeActivity.this,LoginActivity.class);
-                startActivity(go);
-            }
+        login.setOnClickListener(v -> {
+            Intent go = new Intent(WelcomeActivity.this, LoginActivity.class);
+            startActivity(go);
         });
 
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent go = new Intent(WelcomeActivity.this,EmailOrGoogle.class);
-                startActivity(go);
-            }
+        register.setOnClickListener(v -> {
+            Intent go = new Intent(WelcomeActivity.this, EmailOrGoogle.class);
+            startActivity(go);
         });
     }
+
     @Override
     public void onBackPressed() {
         boolean guest = MyApplication.getPrefranceDataBoolean("Guest");
-        if (guest){
+        if (guest) {
             super.onBackPressed();
-        }else {
+        } else {
             Intent startMain = new Intent(Intent.ACTION_MAIN);
             startMain.addCategory(Intent.CATEGORY_HOME);
             startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

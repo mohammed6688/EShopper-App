@@ -1,10 +1,12 @@
 package com.iti.EShopper.Fragment;
 
+import static android.view.View.GONE;
+import static android.view.View.VISIBLE;
+
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -25,28 +27,22 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.facebook.shimmer.ShimmerFrameLayout;
-import com.iti.EShopper.Activity.Auth.WelcomeActivity;
 import com.iti.EShopper.Activity.BasketActivity;
-import com.iti.EShopper.Activity.subCategoryActivity;
+import com.iti.EShopper.Activity.Auth.WelcomeActivity;
 import com.iti.EShopper.Adapter.CategoriseAdapter;
-import com.iti.EShopper.Adapter.SubCategoriseAdapter;
+import com.iti.EShopper.Module.Product;
 import com.iti.EShopper.R;
 import com.iti.EShopper.helper.MyApplication;
-import com.iti.EShopper.models.Category;
-import com.iti.EShopper.models.Product;
-import com.iti.EShopper.models.SiteParser;
+
+import org.json.JSONException;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import static android.view.View.GONE;
-import static android.view.View.VISIBLE;
 
 public class CategoriesFragment extends Fragment {
 
@@ -54,18 +50,17 @@ public class CategoriesFragment extends Fragment {
     private ProgressBar mprogressBar;
     private List<Product> mCategory;
     View view;
-    ImageView phone, basket;
-    String phoneNumber = "+201200033396";
+    ImageView basket;
     TextView progressTxt;
     private int alertCount = 0;
     TextView countTextView;
     FrameLayout redCircle;
     boolean guest;
     ShimmerFrameLayout shimmerFrameLayout;
-
+    String tag_json_obj = "json_obj_req";
     private RequestQueue mRequestQueue;
     private StringRequest mStringRequest;
-    private String url = "http://www.mocky.io/v2/597c41390f0000d002f4dbd1";
+    private String url = "http://10.0.2.2:8080/E_commerce_API/api/eShopper";
 
     public BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
         @Override
@@ -93,6 +88,7 @@ public class CategoriesFragment extends Fragment {
             e.printStackTrace();
         }
 
+
         return view;
     }
 
@@ -105,7 +101,6 @@ public class CategoriesFragment extends Fragment {
         progressTxt = view.findViewById(R.id.progTxt);
         shimmerFrameLayout = view.findViewById(R.id.shimmer_view_container);
         shimmerFrameLayout.startShimmer();
-        phone = view.findViewById(R.id.phone);
         basket = view.findViewById(R.id.basket);
         mprogressBar.setVisibility(View.GONE);
 
@@ -120,15 +115,6 @@ public class CategoriesFragment extends Fragment {
     }
 
     private void initializeListener() {
-        phone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Uri number = Uri.parse("tel:" + phoneNumber);
-                Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
-                startActivity(callIntent);
-            }
-        });
-
         basket.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -139,7 +125,6 @@ public class CategoriesFragment extends Fragment {
                     go.putExtra("intentMode", "home");
                     startActivity(go);
                     getActivity().overridePendingTransition(R.anim.slide_up_info, R.anim.no_change);
-
                 } else {
                     Intent go = new Intent(getContext(), WelcomeActivity.class);
                     startActivity(go);
@@ -150,13 +135,39 @@ public class CategoriesFragment extends Fragment {
     }
 
     private void readUsers() throws IOException {
+        url+= "/getCategories";
+        RequestQueue queue = Volley.newRequestQueue(getContext());
+        JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null, response -> {
+            List<String> AllProductList = new ArrayList<>();
+            for (int i = 0; i < response.length(); i++) {
+                try {
+                    String val;
+                    Log.e("inside", String.valueOf(response.length()));
+                    Log.e("inside", String.valueOf(response));
+                    val=response.getString(i);
+//                    if (response.length()==1){
+//                        val=response.getString(i);
+//                    }else {
+//                        val = response.getJSONObject(i).toString();
+//                    }
+                    AllProductList.add(val);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+            getAllProduct_CallBack(AllProductList);
+        }, error -> {
+            Log.e("error", error.toString());
+            Toast.makeText(getContext(), error.toString(), Toast.LENGTH_LONG).show();
+        });
+        queue.add(request);
+    }
 
-        List<Product> mCategory = SiteParser.instanceData.getProducts();
-        SubCategoriseAdapter homeAdapter = new SubCategoriseAdapter(getContext(), mCategory);
+    private void getAllProduct_CallBack(List<String> allProductList) {
+        CategoriseAdapter homeAdapter = new CategoriseAdapter(getContext(), allProductList);
         recyclerView.setAdapter(homeAdapter);
         recyclerView.setVisibility(View.VISIBLE);
-
-        if (mCategory.size() != 0) {
+        if (allProductList.size() != 0) {
             mprogressBar.setVisibility(View.GONE);
             progressTxt.setVisibility(View.GONE);
 
@@ -165,51 +176,6 @@ public class CategoriesFragment extends Fragment {
             mprogressBar.setVisibility(View.GONE);
         }
         shimmerFrameLayout.setVisibility(View.GONE);
-
-//        mRequestQueue = Volley.newRequestQueue(getContext());
-//        mStringRequest = new StringRequest(Request.Method.GET, url, response -> {
-//            Toast.makeText(getContext(),"Response :" + response.toString(), Toast.LENGTH_LONG).show();//display the response on screen
-//
-//        }, new Response.ErrorListener() {
-//            @Override
-//            public void onErrorResponse(VolleyError error) {
-//
-//                Log.i("TAG","Error :" + error.toString());
-//            }
-//        });
-//
-//        mRequestQueue.add(mStringRequest);
-
-//        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Categorise");
-//        reference.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//
-//                mCategory.clear();
-//                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-//                    Category user = snapshot.getValue(Category.class);
-//                    //assert user != null;
-//                    if (user!=null) {
-//                        mCategory.add(user);
-//                    }
-//                }
-//                CategoriseAdapter homeAdapter = new CategoriseAdapter(getContext(), mCategory);
-//                recyclerView.setAdapter(homeAdapter);
-//
-//                if (mCategory.size()!=0){
-//                    mprogressBar.setVisibility(View.GONE);
-//                    progressTxt.setVisibility(View.GONE);
-//
-//                }else {
-//                    progressTxt.setVisibility(View.VISIBLE);
-//                    mprogressBar.setVisibility(View.GONE);
-//                }
-//                shimmerFrameLayout.setVisibility(View.GONE);
-//
-//            }
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError databaseError) {}
-//        });
     }
 
     private void updateAlertIcon() {

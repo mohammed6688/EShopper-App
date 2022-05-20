@@ -14,19 +14,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.iti.EShopper.Activity.ItemsActivity;
-import com.iti.EShopper.Activity.subCategoryActivity;
+import com.iti.EShopper.Module.Product;
 import com.iti.EShopper.R;
-import com.iti.EShopper.models.Category;
-import com.iti.EShopper.models.Product;
 
 import java.util.List;
 
 public class CategoriseAdapter extends RecyclerView.Adapter<CategoriseAdapter.ProductsQabael> {
 
-    private List<Product> List ;
+    private java.util.List<String> List ;
     private Context mContext;
 
-    public CategoriseAdapter(Context mContext, List<Product> list) {
+    public CategoriseAdapter(Context mContext, List<String> list) {
         this.mContext = mContext;
         this.List = list;
     }
@@ -39,48 +37,29 @@ public class CategoriseAdapter extends RecyclerView.Adapter<CategoriseAdapter.Pr
 
     @Override
     public void onBindViewHolder(@NonNull ProductsQabael holder, int position) {
-        final Product user = List.get(position);
+        String category = List.get(position);
 
-        holder.title.setText(user.getTitle());
-        Glide.with(mContext).load(user.getPhotoUrl()).thumbnail(0.1f).into(holder.image);
-
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent go = new Intent(mContext, ItemsActivity.class);
-                go.putExtra("subCategoryName",user.getSubCategoryName());
-                go.putExtra("categoryName",cat);
-                mContext.startActivity(go);
-
-            }
+        holder.title.setText(category);
+        holder.itemView.setOnClickListener(v -> {
+            Intent go = new Intent(mContext, ItemsActivity.class);
+            go.putExtra("categoryName",category);
+            mContext.startActivity(go);
         });
 
-        holder.card.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent go = new Intent(mContext, ItemsActivity.class);
-                go.putExtra("subCategoryName",user.getSubCategoryName());
-                go.putExtra("categoryName",cat);
-                mContext.startActivity(go);
-            }
+        holder.card.setOnClickListener(v -> {
+            Intent go = new Intent(mContext, ItemsActivity.class);
+            go.putExtra("categoryName",category);
+            mContext.startActivity(go);
         });
-        holder.image.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent go = new Intent(mContext, ItemsActivity.class);
-                go.putExtra("subCategoryName",user.getSubCategoryName());
-                go.putExtra("categoryName",cat);
-                mContext.startActivity(go);
-            }
+        holder.image.setOnClickListener(v -> {
+            Intent go = new Intent(mContext, ItemsActivity.class);
+            go.putExtra("categoryName",category);
+            mContext.startActivity(go);
         });
-        holder.title.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent go = new Intent(mContext, ItemsActivity.class);
-                go.putExtra("subCategoryName",user.getSubCategoryName());
-                go.putExtra("categoryName",cat);
-                mContext.startActivity(go);
-            }
+        holder.title.setOnClickListener(v -> {
+            Intent go = new Intent(mContext, ItemsActivity.class);
+            go.putExtra("categoryName",category);
+            mContext.startActivity(go);
         });
 
     }
